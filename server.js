@@ -1,6 +1,7 @@
 const experss = require("express");
 const http = require("http");
 const socketio = require("socket.io");
+const cors = require("cors");
 const messageFormat = require("./utils/message");
 const {
   getCurrentUser,
@@ -16,6 +17,8 @@ const io = socketio(server, {
     origin: "*",
   },
 });
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.status(200).json({ msg: "Socket Working" });
