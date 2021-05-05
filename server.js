@@ -11,10 +11,10 @@ const {
 
 const app = experss();
 const server = http.createServer(app);
-const io = socketio(server,{
-  cors:{
-    origin:"*"
-  }
+const io = socketio(server, {
+  cors: {
+    origin: "*",
+  },
 });
 
 app.get("/", (req, res) => {
@@ -59,6 +59,6 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, () => console.log(`Server Running on ${PORT}`));
