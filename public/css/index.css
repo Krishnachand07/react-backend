@@ -1,0 +1,23 @@
+.chatInput {
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.msgArea {
+  height: 500px;
+  max-height: 900px;
+  overflow-y: auto;
+}
+
+.msgArea .chatMsg .chatList .chatBubble {
+  padding: 5px;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.msgArea .chatBubble .line-height {
+  line-height: 5px;
+}
